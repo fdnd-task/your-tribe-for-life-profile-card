@@ -1,0 +1,39 @@
+<svg width="901" height="923" viewBox="0 0 901 923" fill="none" xmlns="http://www.w3.org/2000/svg"
+  style="--line: rgba(255,255,255,0.5); --star: rgba(255,255,255,0.8); --line-width: 4;">
+  <circle cx="889" cy="12" r="8" fill="var(--star)" class="star" />
+  <circle cx="817" cy="285" r="8" fill="var(--star)" class="star" />
+  <circle cx="430" cy="193" r="8" fill="var(--star)" class="star" />
+  <circle cx="570" cy="327" r="8" fill="var(--star)" class="star" />
+  <circle cx="712" cy="379" r="8" fill="var(--star)" class="star" />
+  <circle cx="427" cy="548" r="8" fill="var(--star)" class="star" />
+  <circle cx="629" cy="731" r="8" fill="var(--star)" class="star" />
+  <circle cx="374" cy="890" r="8" fill="var(--star)" class="star" />
+  <circle cx="295" cy="813" r="8" fill="var(--star)" class="star" />
+  <circle cx="150" cy="911" r="8" fill="var(--star)" class="star" />
+  <circle cx="255" cy="603" r="8" fill="var(--star)" class="star" />
+  <circle cx="12" cy="765" r="8" fill="var(--star)" class="star" />
+  <line x1="887.939" y1="12.4901" x2="818.939" y2="285.49" stroke="var(--line)" class="line"
+    stroke-width="var(--line-width)" />
+  <line x1="818.342" y1="285.483" x2="713.342" y2="380.483" stroke="var(--line)" class="line"
+    stroke-width="var(--line-width)" />
+  <line x1="569.683" y1="325.12" x2="712.683" y2="377.12" stroke="var(--line)" class="line"
+    stroke-width="var(--line-width)" />
+  <line x1="430.388" y1="190.56" x2="570.388" y2="325.56" stroke="var(--line)" class="line"
+    stroke-width="var(--line-width)" />
+  <line x1="571.684" y1="326.08" x2="428.684" y2="549.08" stroke="var(--line)" class="line"
+    stroke-width="var(--line-width)" />
+  <line x1="712.948" y1="379.454" x2="630.948" y2="731.454" stroke="var(--line)" class="line"
+    stroke-width="var(--line-width)" />
+  <line x1="427.339" y1="546.515" x2="630.339" y2="729.515" stroke="var(--line)" class="line"
+    stroke-width="var(--line-width)" />
+  <line x1="427.609" y1="549.905" x2="255.609" y2="604.905" stroke="var(--line)" class="line"
+    stroke-width="var(--line-width)" />
+  <line x1="256.109" y1="604.664" x2="13.1094" y2="766.664" stroke="var(--line)" class="line"
+    stroke-width="var(--line-width)" />
+  <line x1="630.063" y1="731.694" x2="375.063" y2="891.694" stroke="var(--line)" class="line"
+    stroke-width="var(--line-width)" />
+  <line x1="295.396" y1="810.568" x2="375.396" y2="888.568" stroke="var(--line)" class="line"
+    stroke-width="var(--line-width)" />
+  <line x1="147.888" y1="908.338" x2="292.888" y2="811.338" stroke="var(--line)" class="line"
+    stroke-width="var(--line-width)" />
+</svg>
