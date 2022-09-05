@@ -1,4 +1,21 @@
-<script lang="ts"></script>
+<script lang="ts">
+	import Star from '../Star.svelte';
+
+	const starPositions = [
+		[889, 12],
+		[817, 285],
+		[430, 193],
+		[570, 327],
+		[712, 379],
+		[427, 548],
+		[629, 731],
+		[374, 890],
+		[295, 813],
+		[150, 911],
+		[255, 603],
+		[12, 765]
+	];
+</script>
 
 <div>
 	<svg
@@ -7,20 +24,11 @@
 		viewBox="0 0 901 923"
 		fill="none"
 		xmlns="http://www.w3.org/2000/svg"
-		style="--line: rgba(255,255,255,0.5); --star: rgba(255,255,255,0.8); --line-width: 4;"
+		style="--line: rgba(255,255,255,0.5); --star: rgba(255,255,255,1); --line-width: 4;"
 	>
-		<circle cx="889" cy="12" r="8" fill="var(--star)" class="star" />
-		<circle cx="817" cy="285" r="8" fill="var(--star)" class="star" />
-		<circle cx="430" cy="193" r="8" fill="var(--star)" class="star" />
-		<circle cx="570" cy="327" r="8" fill="var(--star)" class="star" />
-		<circle cx="712" cy="379" r="8" fill="var(--star)" class="star" />
-		<circle cx="427" cy="548" r="8" fill="var(--star)" class="star" />
-		<circle cx="629" cy="731" r="8" fill="var(--star)" class="star" />
-		<circle cx="374" cy="890" r="8" fill="var(--star)" class="star" />
-		<circle cx="295" cy="813" r="8" fill="var(--star)" class="star" />
-		<circle cx="150" cy="911" r="8" fill="var(--star)" class="star" />
-		<circle cx="255" cy="603" r="8" fill="var(--star)" class="star" />
-		<circle cx="12" cy="765" r="8" fill="var(--star)" class="star" />
+		{#each starPositions as star}
+			<Star cx={star[0]} cy={star[1]} radius="8" />
+		{/each}
 		<line
 			x1="887.939"
 			y1="12.4901"
@@ -145,5 +153,6 @@
 		width: 90%;
 		max-width: 60rem;
 		max-height: 40rem;
+		overflow: visible;
 	}
 </style>
