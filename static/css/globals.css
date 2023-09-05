@@ -1,0 +1,13 @@
+:root{
+    --main-bg: #040519;
+    --blob-color: #D6863C;
+
+    --card-bg: linear-gradient(135deg, #D6863C 0%, #141765 100%);
+    --card-border-radius: 10px;
+}
+
+body{
+    background: var(--main-bg);
+    font-family: 'Bebas Neue', sans-serif;
+    color: #FFFFFF;
+}
