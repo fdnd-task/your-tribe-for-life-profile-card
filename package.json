@@ -27,6 +27,7 @@
 	"dependencies": {
 		"@prismicio/client": "^7.2.0",
 		"@prismicio/helpers": "^2.3.9",
-		"@prismicio/svelte": "^0.1.2"
+		"@prismicio/svelte": "^0.1.2",
+		"three": "^0.156.1"
 	}
 }
