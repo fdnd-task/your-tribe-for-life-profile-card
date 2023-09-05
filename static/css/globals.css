@@ -6,8 +6,29 @@
     --card-border-radius: 10px;
 }
 
+/* Reset */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+ul{
+    list-style-type: none;
+}
+
+a{
+    text-decoration: none;
+}
+
+/* General */
+html{
+    height: 100%;
+}
+
 body{
     background: var(--main-bg);
     font-family: 'Bebas Neue', sans-serif;
     color: #FFFFFF;
+    height: 100%;
 }

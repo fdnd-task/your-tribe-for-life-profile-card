@@ -24,4 +24,12 @@
         z-index: -2;
         background: var(--main-bg);
     }
+
+    main{
+        width: 80%;
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
 </style>
