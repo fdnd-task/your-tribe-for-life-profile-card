@@ -19,6 +19,12 @@
 					"choices": {
 						"heading_text": {
 							"type": "SharedSlice"
+						},
+						"blob_img": {
+							"type": "SharedSlice"
+						},
+						"bio_text": {
+							"type": "SharedSlice"
 						}
 					}
 				}

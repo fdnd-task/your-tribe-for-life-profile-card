@@ -4,7 +4,7 @@ import type * as prismic from '@prismicio/client';
 
 type Simplify<T> = { [KeyType in keyof T]: T[KeyType] };
 
-type PageDocumentDataSlicesSlice = HeadingTextSlice;
+type PageDocumentDataSlicesSlice = HeadingTextSlice | BlobImgSlice | BioTextSlice;
 
 /**
  * Content for page documents
@@ -72,6 +72,90 @@ export type PageDocument<Lang extends string = string> = prismic.PrismicDocument
 export type AllDocumentTypes = PageDocument;
 
 /**
+ * Primary content in *BioText → Items*
+ */
+export interface BioTextSliceDefaultItem {
+	/**
+	 * bioline field in *BioText → Items*
+	 *
+	 * - **Field Type**: Text
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: bio_text.items[].bioline
+	 * - **Documentation**: https://prismic.io/docs/field#key-text
+	 */
+	bioline: prismic.KeyTextField;
+}
+
+/**
+ * Default variation for BioText Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: Default
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type BioTextSliceDefault = prismic.SharedSliceVariation<
+	'default',
+	Record<string, never>,
+	Simplify<BioTextSliceDefaultItem>
+>;
+
+/**
+ * Slice variation for *BioText*
+ */
+type BioTextSliceVariation = BioTextSliceDefault;
+
+/**
+ * BioText Shared Slice
+ *
+ * - **API ID**: `bio_text`
+ * - **Description**: BioText
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type BioTextSlice = prismic.SharedSlice<'bio_text', BioTextSliceVariation>;
+
+/**
+ * Primary content in *BlobImg → Primary*
+ */
+export interface BlobImgSliceDefaultPrimary {
+	/**
+	 * image field in *BlobImg → Primary*
+	 *
+	 * - **Field Type**: Image
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: blob_img.primary.image
+	 * - **Documentation**: https://prismic.io/docs/field#image
+	 */
+	image: prismic.ImageField<never>;
+}
+
+/**
+ * Default variation for BlobImg Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: Default
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type BlobImgSliceDefault = prismic.SharedSliceVariation<
+	'default',
+	Simplify<BlobImgSliceDefaultPrimary>,
+	never
+>;
+
+/**
+ * Slice variation for *BlobImg*
+ */
+type BlobImgSliceVariation = BlobImgSliceDefault;
+
+/**
+ * BlobImg Shared Slice
+ *
+ * - **API ID**: `blob_img`
+ * - **Description**: BlobImg
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type BlobImgSlice = prismic.SharedSlice<'blob_img', BlobImgSliceVariation>;
+
+/**
  * Primary content in *HeadingText → Primary*
  */
 export interface HeadingTextSliceDefaultPrimary {
@@ -127,6 +211,14 @@ declare module '@prismicio/client' {
 			PageDocumentData,
 			PageDocumentDataSlicesSlice,
 			AllDocumentTypes,
+			BioTextSlice,
+			BioTextSliceDefaultItem,
+			BioTextSliceVariation,
+			BioTextSliceDefault,
+			BlobImgSlice,
+			BlobImgSliceDefaultPrimary,
+			BlobImgSliceVariation,
+			BlobImgSliceDefault,
 			HeadingTextSlice,
 			HeadingTextSliceDefaultPrimary,
 			HeadingTextSliceVariation,

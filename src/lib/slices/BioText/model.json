@@ -1,0 +1,26 @@
+{
+  "id": "bio_text",
+  "type": "SharedSlice",
+  "name": "BioText",
+  "description": "BioText",
+  "variations": [
+    {
+      "id": "default",
+      "name": "Default",
+      "docURL": "...",
+      "version": "initial",
+      "description": "Default",
+      "imageUrl": "",
+      "primary": {},
+      "items": {
+        "bioline": {
+          "type": "Text",
+          "config": {
+            "label": "bioline",
+            "placeholder": ""
+          }
+        }
+      }
+    }
+  ]
+}
