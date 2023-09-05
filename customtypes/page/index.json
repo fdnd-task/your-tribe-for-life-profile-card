@@ -1,6 +1,6 @@
 {
-	"id": "index",
-	"label": "index",
+	"id": "page",
+	"label": "page",
 	"format": "page",
 	"repeatable": true,
 	"status": true,
@@ -17,7 +17,7 @@
 				"fieldset": "Slice Zone",
 				"config": {
 					"choices": {
-						"text_main": {
+						"heading_text": {
 							"type": "SharedSlice"
 						}
 					}

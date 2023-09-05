@@ -4,50 +4,50 @@ import type * as prismic from '@prismicio/client';
 
 type Simplify<T> = { [KeyType in keyof T]: T[KeyType] };
 
-type IndexDocumentDataSlicesSlice = TextMainSlice;
+type PageDocumentDataSlicesSlice = HeadingTextSlice;
 
 /**
- * Content for index documents
+ * Content for page documents
  */
-interface IndexDocumentData {
+interface PageDocumentData {
 	/**
-	 * Slice Zone field in *index*
+	 * Slice Zone field in *page*
 	 *
 	 * - **Field Type**: Slice Zone
 	 * - **Placeholder**: *None*
-	 * - **API ID Path**: index.slices[]
+	 * - **API ID Path**: page.slices[]
 	 * - **Tab**: Main
 	 * - **Documentation**: https://prismic.io/docs/field#slices
 	 */
-	slices: prismic.SliceZone<IndexDocumentDataSlicesSlice>
+	slices: prismic.SliceZone<PageDocumentDataSlicesSlice>
 	/**
-	 * Meta Description field in *index*
+	 * Meta Description field in *page*
 	 *
 	 * - **Field Type**: Text
 	 * - **Placeholder**: A brief summary of the page
-	 * - **API ID Path**: index.meta_description
+	 * - **API ID Path**: page.meta_description
 	 * - **Tab**: SEO & Metadata
 	 * - **Documentation**: https://prismic.io/docs/field#key-text
 	 */;
 	meta_description: prismic.KeyTextField;
 
 	/**
-	 * Meta Image field in *index*
+	 * Meta Image field in *page*
 	 *
 	 * - **Field Type**: Image
 	 * - **Placeholder**: *None*
-	 * - **API ID Path**: index.meta_image
+	 * - **API ID Path**: page.meta_image
 	 * - **Tab**: SEO & Metadata
 	 * - **Documentation**: https://prismic.io/docs/field#image
 	 */
 	meta_image: prismic.ImageField<never>;
 
 	/**
-	 * Meta Title field in *index*
+	 * Meta Title field in *page*
 	 *
 	 * - **Field Type**: Text
 	 * - **Placeholder**: A title of the page used for social media and search engines
-	 * - **API ID Path**: index.meta_title
+	 * - **API ID Path**: page.meta_title
 	 * - **Tab**: SEO & Metadata
 	 * - **Documentation**: https://prismic.io/docs/field#key-text
 	 */
@@ -55,78 +55,63 @@ interface IndexDocumentData {
 }
 
 /**
- * index document from Prismic
+ * page document from Prismic
  *
- * - **API ID**: `index`
+ * - **API ID**: `page`
  * - **Repeatable**: `true`
  * - **Documentation**: https://prismic.io/docs/custom-types
  *
  * @typeParam Lang - Language API ID of the document.
  */
-export type IndexDocument<Lang extends string = string> = prismic.PrismicDocumentWithUID<
-	Simplify<IndexDocumentData>,
-	'index',
+export type PageDocument<Lang extends string = string> = prismic.PrismicDocumentWithUID<
+	Simplify<PageDocumentData>,
+	'page',
 	Lang
 >;
 
-export type AllDocumentTypes = IndexDocument;
+export type AllDocumentTypes = PageDocument;
 
 /**
- * Primary content in *TextMain → Primary*
+ * Primary content in *HeadingText → Primary*
  */
-export interface TextMainSliceDefaultPrimary {
+export interface HeadingTextSliceDefaultPrimary {
 	/**
-	 * TestText field in *TextMain → Primary*
-	 *
-	 * - **Field Type**: Rich Text
-	 * - **Placeholder**: *None*
-	 * - **API ID Path**: text_main.primary.testtext
-	 * - **Documentation**: https://prismic.io/docs/field#rich-text-title
-	 */
-	testtext: prismic.RichTextField;
-}
-
-/**
- * Primary content in *TextMain → Items*
- */
-export interface TextMainSliceDefaultItem {
-	/**
-	 * Title field in *TextMain → Items*
+	 * text field in *HeadingText → Primary*
 	 *
 	 * - **Field Type**: Text
 	 * - **Placeholder**: *None*
-	 * - **API ID Path**: text_main.items[].title
+	 * - **API ID Path**: heading_text.primary.text
 	 * - **Documentation**: https://prismic.io/docs/field#key-text
 	 */
-	title: prismic.KeyTextField;
+	text: prismic.KeyTextField;
 }
 
 /**
- * Default variation for TextMain Slice
+ * Default variation for HeadingText Slice
  *
  * - **API ID**: `default`
  * - **Description**: Default
  * - **Documentation**: https://prismic.io/docs/slice
  */
-export type TextMainSliceDefault = prismic.SharedSliceVariation<
+export type HeadingTextSliceDefault = prismic.SharedSliceVariation<
 	'default',
-	Simplify<TextMainSliceDefaultPrimary>,
-	Simplify<TextMainSliceDefaultItem>
+	Simplify<HeadingTextSliceDefaultPrimary>,
+	never
 >;
 
 /**
- * Slice variation for *TextMain*
+ * Slice variation for *HeadingText*
  */
-type TextMainSliceVariation = TextMainSliceDefault;
+type HeadingTextSliceVariation = HeadingTextSliceDefault;
 
 /**
- * TextMain Shared Slice
+ * HeadingText Shared Slice
  *
- * - **API ID**: `text_main`
- * - **Description**: TextMain
+ * - **API ID**: `heading_text`
+ * - **Description**: HeadingText
  * - **Documentation**: https://prismic.io/docs/slice
  */
-export type TextMainSlice = prismic.SharedSlice<'text_main', TextMainSliceVariation>;
+export type HeadingTextSlice = prismic.SharedSlice<'heading_text', HeadingTextSliceVariation>;
 
 declare module '@prismicio/client' {
 	interface CreateClient {
@@ -138,15 +123,14 @@ declare module '@prismicio/client' {
 
 	namespace Content {
 		export type {
-			IndexDocument,
-			IndexDocumentData,
-			IndexDocumentDataSlicesSlice,
+			PageDocument,
+			PageDocumentData,
+			PageDocumentDataSlicesSlice,
 			AllDocumentTypes,
-			TextMainSlice,
-			TextMainSliceDefaultPrimary,
-			TextMainSliceDefaultItem,
-			TextMainSliceVariation,
-			TextMainSliceDefault
+			HeadingTextSlice,
+			HeadingTextSliceDefaultPrimary,
+			HeadingTextSliceVariation,
+			HeadingTextSliceDefault
 		};
 	}
 }
