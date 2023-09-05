@@ -75,3 +75,6 @@ export const createScene = (canvas) => {
     resize()
     animate()
 }
+
+// Listeners
+window.addEventListener('resize', resize)
