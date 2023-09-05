@@ -11,7 +11,9 @@
 
 <canvas bind:this={canvas}></canvas>
 
-<slot></slot>
+<main>
+    <slot></slot>
+</main>
 
 <style>
     canvas{
@@ -20,5 +22,6 @@
         left: 0;
         top: 0;
         z-index: -2;
+        background: var(--main-bg);
     }
 </style>

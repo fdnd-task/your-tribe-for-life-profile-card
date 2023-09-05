@@ -2,14 +2,15 @@ import * as THREE from 'three'
 
 // Nieuwe scene
 const scene = new THREE.Scene()
+scene.background = new THREE.Color(0x040519)
 
 // Camera
-const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000)
+const camera = new THREE.PerspectiveCamera(50, window.innerWidth / window.innerHeight, 0.1, 50)
 
 const getRandomParticlePos = (particleCount) => {
     const arr = new Float32Array(particleCount * 3)
     for (let i = 0; i < particleCount; i++) {
-        arr[i] = (Math.random() - 0.5) * 10
+        arr[i] = (Math.random() - 0.5) * 2
     }
     return arr
 }
@@ -17,7 +18,7 @@ const getRandomParticlePos = (particleCount) => {
 const geometry = new THREE.BufferGeometry()
 geometry.setAttribute(
     "position",
-    new THREE.BufferAttribute(getRandomParticlePos(4000), 3)
+    new THREE.BufferAttribute(getRandomParticlePos(2000), 3)
 )
 
 // Loader
@@ -25,9 +26,10 @@ const loader = new THREE.TextureLoader()
 
 // Materiaal
 const material = new THREE.PointsMaterial({
-    size: 0.05,
-    map: loader.load("/img/bg-blob.svg"),
+    size: 0.08,
+    map: loader.load("/img/blobv3.svg"),
     transparent: true,
+    alphaTest: 0.5
 })
 
 // Mesh
