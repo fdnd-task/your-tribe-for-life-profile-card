@@ -17,13 +17,10 @@
 				"fieldset": "Slice Zone",
 				"config": {
 					"choices": {
-						"heading_text": {
+						"card_front": {
 							"type": "SharedSlice"
 						},
-						"blob_img": {
-							"type": "SharedSlice"
-						},
-						"bio_text": {
+						"card_back": {
 							"type": "SharedSlice"
 						}
 					}

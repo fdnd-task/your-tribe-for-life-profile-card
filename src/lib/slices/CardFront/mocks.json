@@ -3,9 +3,9 @@
 		"__TYPE__": "SharedSliceContent",
 		"variation": "default",
 		"primary": {
-			"text": {
+			"heading": {
 				"__TYPE__": "FieldContent",
-				"value": "spirit",
+				"value": "climb",
 				"type": "Text"
 			}
 		},

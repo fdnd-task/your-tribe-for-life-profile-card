@@ -1,8 +1,8 @@
 {
-  "id": "bio_text",
+  "id": "card_back",
   "type": "SharedSlice",
-  "name": "BioText",
-  "description": "BioText",
+  "name": "CardBack",
+  "description": "CardBack",
   "variations": [
     {
       "id": "default",
@@ -11,12 +11,21 @@
       "version": "initial",
       "description": "Default",
       "imageUrl": "",
-      "primary": {},
+      "primary": {
+        "picture": {
+          "type": "Image",
+          "config": {
+            "label": "Picture",
+            "constraint": {},
+            "thumbnails": []
+          }
+        }
+      },
       "items": {
-        "bioline": {
+        "infoline": {
           "type": "Text",
           "config": {
-            "label": "bioline",
+            "label": "InfoLine",
             "placeholder": ""
           }
         }

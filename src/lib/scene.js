@@ -5,7 +5,7 @@ const scene = new THREE.Scene()
 scene.background = new THREE.Color(0x040519)
 
 // Camera
-const camera = new THREE.PerspectiveCamera(50, window.innerWidth / window.innerHeight, 0.1, 50)
+const camera = new THREE.PerspectiveCamera(50, window.innerWidth / window.innerHeight, 0.1, 150)
 
 const getRandomParticlePos = (particleCount) => {
     const arr = new Float32Array(particleCount * 3)
@@ -18,7 +18,7 @@ const getRandomParticlePos = (particleCount) => {
 const geometry = new THREE.BufferGeometry()
 geometry.setAttribute(
     "position",
-    new THREE.BufferAttribute(getRandomParticlePos(2000), 3)
+    new THREE.BufferAttribute(getRandomParticlePos(500), 3)
 )
 
 // Loader
@@ -26,10 +26,10 @@ const loader = new THREE.TextureLoader()
 
 // Materiaal
 const material = new THREE.PointsMaterial({
-    size: 0.08,
+    size: 0.18,
     map: loader.load("/img/blobv3.svg"),
     transparent: true,
-    alphaTest: 0.5
+    alphaTest: 0.5,
 })
 
 // Mesh
@@ -59,8 +59,8 @@ const animate = () =>{
     blob.rotation.x += 0.0002
     blob.rotation.y += 0.0001
 
-    blob.position.x = mouseX * 0.0007
-    blob.position.z = mouseY * -0.0007
+    blob.position.x = mouseX * 0.0002
+    blob.position.z = mouseY * -0.0002
 
     renderer.render(scene, camera)
 }

@@ -11,11 +11,12 @@
 
 <canvas bind:this={canvas}></canvas>
 
-<main>
+<!-- <main> -->
     <slot></slot>
-</main>
+<!-- </main> -->
 
 <style>
+    /* Background canvas ThreeJS */
     canvas{
         display: block;
         position: fixed;
@@ -25,11 +26,18 @@
         background: var(--main-bg);
     }
 
-    main{
-        width: 80%;
+    /* Card */
+    /* main{
+        width: 75%;
+        height: 100%;
         margin: auto;
         display: flex;
         flex-direction: column;
         align-items: center;
-    }
+        justify-content: center;
+        transform-style: preserve-3d;
+        transition: transform 0.8s ease-in-out;
+        transform-origin: center right;
+        position: relative;
+    } */
 </style>

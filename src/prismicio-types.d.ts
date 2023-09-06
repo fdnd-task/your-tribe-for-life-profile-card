@@ -4,7 +4,7 @@ import type * as prismic from '@prismicio/client';
 
 type Simplify<T> = { [KeyType in keyof T]: T[KeyType] };
 
-type PageDocumentDataSlicesSlice = HeadingTextSlice | BlobImgSlice | BioTextSlice;
+type PageDocumentDataSlicesSlice = CardFrontSlice | CardBackSlice;
 
 /**
  * Content for page documents
@@ -72,130 +72,103 @@ export type PageDocument<Lang extends string = string> = prismic.PrismicDocument
 export type AllDocumentTypes = PageDocument;
 
 /**
- * Primary content in *BioText → Items*
+ * Primary content in *CardBack → Primary*
  */
-export interface BioTextSliceDefaultItem {
+export interface CardBackSliceDefaultPrimary {
 	/**
-	 * bioline field in *BioText → Items*
-	 *
-	 * - **Field Type**: Text
-	 * - **Placeholder**: *None*
-	 * - **API ID Path**: bio_text.items[].bioline
-	 * - **Documentation**: https://prismic.io/docs/field#key-text
-	 */
-	bioline: prismic.KeyTextField;
-}
-
-/**
- * Default variation for BioText Slice
- *
- * - **API ID**: `default`
- * - **Description**: Default
- * - **Documentation**: https://prismic.io/docs/slice
- */
-export type BioTextSliceDefault = prismic.SharedSliceVariation<
-	'default',
-	Record<string, never>,
-	Simplify<BioTextSliceDefaultItem>
->;
-
-/**
- * Slice variation for *BioText*
- */
-type BioTextSliceVariation = BioTextSliceDefault;
-
-/**
- * BioText Shared Slice
- *
- * - **API ID**: `bio_text`
- * - **Description**: BioText
- * - **Documentation**: https://prismic.io/docs/slice
- */
-export type BioTextSlice = prismic.SharedSlice<'bio_text', BioTextSliceVariation>;
-
-/**
- * Primary content in *BlobImg → Primary*
- */
-export interface BlobImgSliceDefaultPrimary {
-	/**
-	 * image field in *BlobImg → Primary*
+	 * Picture field in *CardBack → Primary*
 	 *
 	 * - **Field Type**: Image
 	 * - **Placeholder**: *None*
-	 * - **API ID Path**: blob_img.primary.image
+	 * - **API ID Path**: card_back.primary.picture
 	 * - **Documentation**: https://prismic.io/docs/field#image
 	 */
-	image: prismic.ImageField<never>;
+	picture: prismic.ImageField<never>;
 }
 
 /**
- * Default variation for BlobImg Slice
- *
- * - **API ID**: `default`
- * - **Description**: Default
- * - **Documentation**: https://prismic.io/docs/slice
+ * Primary content in *CardBack → Items*
  */
-export type BlobImgSliceDefault = prismic.SharedSliceVariation<
-	'default',
-	Simplify<BlobImgSliceDefaultPrimary>,
-	never
->;
-
-/**
- * Slice variation for *BlobImg*
- */
-type BlobImgSliceVariation = BlobImgSliceDefault;
-
-/**
- * BlobImg Shared Slice
- *
- * - **API ID**: `blob_img`
- * - **Description**: BlobImg
- * - **Documentation**: https://prismic.io/docs/slice
- */
-export type BlobImgSlice = prismic.SharedSlice<'blob_img', BlobImgSliceVariation>;
-
-/**
- * Primary content in *HeadingText → Primary*
- */
-export interface HeadingTextSliceDefaultPrimary {
+export interface CardBackSliceDefaultItem {
 	/**
-	 * text field in *HeadingText → Primary*
+	 * InfoLine field in *CardBack → Items*
 	 *
 	 * - **Field Type**: Text
 	 * - **Placeholder**: *None*
-	 * - **API ID Path**: heading_text.primary.text
+	 * - **API ID Path**: card_back.items[].infoline
 	 * - **Documentation**: https://prismic.io/docs/field#key-text
 	 */
-	text: prismic.KeyTextField;
+	infoline: prismic.KeyTextField;
 }
 
 /**
- * Default variation for HeadingText Slice
+ * Default variation for CardBack Slice
  *
  * - **API ID**: `default`
  * - **Description**: Default
  * - **Documentation**: https://prismic.io/docs/slice
  */
-export type HeadingTextSliceDefault = prismic.SharedSliceVariation<
+export type CardBackSliceDefault = prismic.SharedSliceVariation<
 	'default',
-	Simplify<HeadingTextSliceDefaultPrimary>,
+	Simplify<CardBackSliceDefaultPrimary>,
+	Simplify<CardBackSliceDefaultItem>
+>;
+
+/**
+ * Slice variation for *CardBack*
+ */
+type CardBackSliceVariation = CardBackSliceDefault;
+
+/**
+ * CardBack Shared Slice
+ *
+ * - **API ID**: `card_back`
+ * - **Description**: CardBack
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type CardBackSlice = prismic.SharedSlice<'card_back', CardBackSliceVariation>;
+
+/**
+ * Primary content in *CardFront → Primary*
+ */
+export interface CardFrontSliceDefaultPrimary {
+	/**
+	 * Heading field in *CardFront → Primary*
+	 *
+	 * - **Field Type**: Text
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: card_front.primary.heading
+	 * - **Documentation**: https://prismic.io/docs/field#key-text
+	 */
+	heading: prismic.KeyTextField;
+}
+
+/**
+ * Default variation for CardFront Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: Default
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type CardFrontSliceDefault = prismic.SharedSliceVariation<
+	'default',
+	Simplify<CardFrontSliceDefaultPrimary>,
 	never
 >;
 
 /**
- * Slice variation for *HeadingText*
+ * Slice variation for *CardFront*
  */
-type HeadingTextSliceVariation = HeadingTextSliceDefault;
+type CardFrontSliceVariation = CardFrontSliceDefault;
 
 /**
- * HeadingText Shared Slice
+ * CardFront Shared Slice
  *
- * - **API ID**: `heading_text`
- * - **Description**: HeadingText
+ * - **API ID**: `card_front`
+ * - **Description**: CardFront
  * - **Documentation**: https://prismic.io/docs/slice
  */
-export type HeadingTextSlice = prismic.SharedSlice<'heading_text', HeadingTextSliceVariation>;
+export type CardFrontSlice = prismic.SharedSlice<'card_front', CardFrontSliceVariation>;
 
 declare module '@prismicio/client' {
 	interface CreateClient {
@@ -211,18 +184,15 @@ declare module '@prismicio/client' {
 			PageDocumentData,
 			PageDocumentDataSlicesSlice,
 			AllDocumentTypes,
-			BioTextSlice,
-			BioTextSliceDefaultItem,
-			BioTextSliceVariation,
-			BioTextSliceDefault,
-			BlobImgSlice,
-			BlobImgSliceDefaultPrimary,
-			BlobImgSliceVariation,
-			BlobImgSliceDefault,
-			HeadingTextSlice,
-			HeadingTextSliceDefaultPrimary,
-			HeadingTextSliceVariation,
-			HeadingTextSliceDefault
+			CardBackSlice,
+			CardBackSliceDefaultPrimary,
+			CardBackSliceDefaultItem,
+			CardBackSliceVariation,
+			CardBackSliceDefault,
+			CardFrontSlice,
+			CardFrontSliceDefaultPrimary,
+			CardFrontSliceVariation,
+			CardFrontSliceDefault
 		};
 	}
 }
