@@ -1,11 +1,12 @@
 <script>
 	/** @type {import("@prismicio/client").Content.CardBackSlice} */
     import { PrismicImage } from "@prismicio/svelte";
+    let cardBack
 
 	export let slice;
 </script>
 
-<section data-slice-type={slice.slice_type} data-slice-variation={slice.variation}>
+<section class="cardBack" bind:this={cardBack} data-slice-type={slice.slice_type} data-slice-variation={slice.variation}>
     <div class="img-wrapper">
         <PrismicImage class="image" field={slice.primary.picture} width=200 height=300 />
     </div>
@@ -33,7 +34,6 @@
         background: radial-gradient(circle, rgba(4,5,25,0.3) 0%, rgba(255,255,255,0.1) 100%);
         backdrop-filter: blur(10px);
         box-shadow: 0px 0px 6px 2px rgba(255, 255, 255, 0.25);
-        /* display: none; */
     }
 
     section:before{
