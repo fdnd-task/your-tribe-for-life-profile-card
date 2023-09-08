@@ -1,0 +1,26 @@
+{
+  "id": "page_content",
+  "type": "SharedSlice",
+  "name": "PageContent",
+  "description": "PageContent",
+  "variations": [
+    {
+      "id": "default",
+      "name": "Default",
+      "docURL": "...",
+      "version": "initial",
+      "description": "Default",
+      "imageUrl": "",
+      "primary": {
+        "textfield": {
+          "type": "Text",
+          "config": {
+            "label": "textField",
+            "placeholder": ""
+          }
+        }
+      },
+      "items": {}
+    }
+  ]
+}

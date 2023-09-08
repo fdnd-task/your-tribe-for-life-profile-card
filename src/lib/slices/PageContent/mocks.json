@@ -1,0 +1,14 @@
+[
+	{
+		"__TYPE__": "SharedSliceContent",
+		"variation": "default",
+		"primary": {
+			"textfield": {
+				"__TYPE__": "FieldContent",
+				"value": "between",
+				"type": "Text"
+			}
+		},
+		"items": []
+	}
+]
