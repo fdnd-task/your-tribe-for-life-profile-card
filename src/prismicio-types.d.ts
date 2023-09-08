@@ -133,14 +133,24 @@ export type CardBackSlice = prismic.SharedSlice<'card_back', CardBackSliceVariat
  */
 export interface CardFrontSliceDefaultPrimary {
 	/**
-	 * Heading field in *CardFront → Primary*
+	 * firstName field in *CardFront → Primary*
 	 *
 	 * - **Field Type**: Text
 	 * - **Placeholder**: *None*
-	 * - **API ID Path**: card_front.primary.heading
+	 * - **API ID Path**: card_front.primary.firstname
 	 * - **Documentation**: https://prismic.io/docs/field#key-text
 	 */
-	heading: prismic.KeyTextField;
+	firstname: prismic.KeyTextField;
+
+	/**
+	 * lastName field in *CardFront → Primary*
+	 *
+	 * - **Field Type**: Text
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: card_front.primary.lastname
+	 * - **Documentation**: https://prismic.io/docs/field#key-text
+	 */
+	lastname: prismic.KeyTextField;
 }
 
 /**

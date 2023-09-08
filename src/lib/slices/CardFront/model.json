@@ -12,10 +12,17 @@
       "description": "Default",
       "imageUrl": "",
       "primary": {
-        "heading": {
+        "firstname": {
           "type": "Text",
           "config": {
-            "label": "Heading",
+            "label": "firstName",
+            "placeholder": ""
+          }
+        },
+        "lastname": {
+          "type": "Text",
+          "config": {
+            "label": "lastName",
             "placeholder": ""
           }
         }

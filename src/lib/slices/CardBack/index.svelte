@@ -1,6 +1,6 @@
 <script>
 	/** @type {import("@prismicio/client").Content.CardBackSlice} */
-    import { PrismicImage } from "@prismicio/svelte";
+    // import { PrismicImage } from "@prismicio/svelte";
     let cardBack
 
 	export let slice;
@@ -8,7 +8,8 @@
 
 <section class="cardBack" bind:this={cardBack} data-slice-type={slice.slice_type} data-slice-variation={slice.variation}>
     <div class="img-wrapper">
-        <PrismicImage class="image" field={slice.primary.picture} width=200 height=300 />
+        <!-- <PrismicImage class="image" field={slice.primary.picture} width=200 height=300 /> -->
+        <img src={slice.primary.picture.url} alt="{slice.primary.picture.alt}" width=200 height=300>
     </div>
 
     <article>

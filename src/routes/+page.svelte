@@ -19,12 +19,6 @@
         let cardBack = mainCard.querySelector('.cardBack')
         let glare = mainCard.querySelector('.glare')
 
-        // let windowInfo = {
-        //     innerWidth: window.innerWidth,
-        //     innerHeight: window.innerHeight
-        // }
-        // console.log(window.innerWidth)
-
         cardFront.addEventListener('mouseenter', (e) => {
             calculateAngle(e, mainCard, cardFront, cardBack, glare)
         })

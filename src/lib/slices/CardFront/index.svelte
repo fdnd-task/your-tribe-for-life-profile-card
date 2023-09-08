@@ -8,7 +8,10 @@
 
 <section class="cardFront" bind:this={cardFront} data-slice-type={slice.slice_type} data-slice-variation={slice.variation}>
     <span class="glare" bind:this={glare}></span>
-	<h1>{slice.primary.heading}</h1>
+    <div class="name">
+        <p class="first-name">{slice.primary.firstname}</p>
+        <p class="last-name">{slice.primary.lastname}</p>
+    </div>
 </section>
 
 
@@ -43,9 +46,38 @@
                 mask-composite: exclude;
     }
 
-    h1{
-        color: white;
-        opacity: 1;
+    .name{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    .first-name, .last-name{
+        font-size: 2em;
+        font-weight: normal;
+        line-height: 0.8;
+        position: relative;
+        text-transform: uppercase;
+    }
+
+    .first-name::after{
+        content: "Tristan";
+        white-space: pre;
+        color: transparent;
+        position: absolute;
+        left: 2px;
+        top: -2px;
+        -webkit-text-stroke: 1px #fff;
+    }
+
+    .last-name::after{
+        content: "De Muijnck";
+        color: transparent;
+        position: absolute;
+        left: 2px;
+        top: -2px;
+        -webkit-text-stroke: 1px #fff;
     }
 
     section span{

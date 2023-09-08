@@ -3,9 +3,14 @@
 		"__TYPE__": "SharedSliceContent",
 		"variation": "default",
 		"primary": {
-			"heading": {
+			"firstname": {
 				"__TYPE__": "FieldContent",
-				"value": "climb",
+				"value": "completely",
+				"type": "Text"
+			},
+			"lastname": {
+				"__TYPE__": "FieldContent",
+				"value": "decide",
 				"type": "Text"
 			}
 		},
