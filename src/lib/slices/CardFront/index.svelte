@@ -1,9 +1,13 @@
 <script>
 	/** @type {import("@prismicio/client").Content.CardFrontSlice} */
+
+    let cardFront, glare
+
 	export let slice;
 </script>
 
-<section data-slice-type={slice.slice_type} data-slice-variation={slice.variation}>
+<section class="cardFront" bind:this={cardFront} data-slice-type={slice.slice_type} data-slice-variation={slice.variation}>
+    <span class="glare" bind:this={glare}></span>
 	<h1>{slice.primary.heading}</h1>
 </section>
 
@@ -22,12 +26,7 @@
         border-radius: var(--card-border-radius);
         backdrop-filter: blur(10px);
         box-shadow: 0px 0px 6px 2px rgba(255, 255, 255, 0.25);
-        /* border-radius: var(--card-border-radius);
-        border: 3px solid transparent;
-        border-image-slice: 1;
-        border-image-source: var(--card-bg);
-        background: linear-gradient(var(--main-bg), var(--main-bg)) padding-box,
-        linear-gradient(135deg, #D6863C 0%, #141765 100%) border-box; */
+        transition: all 0.15s ease-out;
     }
 
     section:before{
@@ -47,5 +46,21 @@
     h1{
         color: white;
         opacity: 1;
+    }
+
+    section span{
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        transition: all 0.1s ease-out;
+        opacity: 0.05;
+        pointer-events: none;
+        height: 100%;
+        border-radius: 14px;
+        z-index: 9999;
+        mix-blend-mode: hard-light;
+        background: radial-gradient(circle at 50% 50%, rgb(199 198 243), transparent);
     }
 </style>
