@@ -11,3 +11,58 @@
 	{/each}
 
 </section>
+
+
+<style>
+	/* Assuming this is your Svelte component's class */
+	section[data-slice-type] {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+		gap: 20px;
+		padding: 20px;
+		background-color: #f5f5f5;
+	}
+
+	.PrismicImage {
+		width: 300px;
+		height: auto;
+		border-radius: 10px;
+		overflow: hidden;
+		box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+		transition: transform 0.2s;
+	}
+
+	.PrismicImage:hover {
+		transform: scale(1.05);
+	}
+
+	/* Adjust these styles to fit your design */
+	.PrismicImage img {
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+	}
+
+	/* Style the caption or any other content within the image container */
+	.PrismicImage .caption {
+		background-color: rgba(0, 0, 0, 0.7);
+		color: #fff;
+		padding: 5px;
+		text-align: center;
+		font-size: 14px;
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		width: 100%;
+		transition: opacity 0.2s;
+		opacity: 0;
+	}
+
+	.PrismicImage:hover .caption {
+		opacity: 1;
+	}
+
+
+
+</style>

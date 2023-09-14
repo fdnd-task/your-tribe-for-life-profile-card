@@ -11,6 +11,17 @@ type PageDocumentDataSlicesSlice = PageContentSlice | TestSliceSlice;
  */
 interface PageDocumentData {
 	/**
+	 * name field in *page*
+	 *
+	 * - **Field Type**: Text
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: page.name
+	 * - **Tab**: Main
+	 * - **Documentation**: https://prismic.io/docs/field#key-text
+	 */
+	name: prismic.KeyTextField;
+
+	/**
 	 * Slice Zone field in *page*
 	 *
 	 * - **Field Type**: Slice Zone

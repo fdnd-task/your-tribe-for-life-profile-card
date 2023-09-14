@@ -18,10 +18,6 @@ const routes = [
 	{
 		type: 'page',
 		path: '/'
-	},
-	{
-		type: 'page',
-		path: '/:uid'
 	}
 ];
 

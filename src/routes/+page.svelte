@@ -4,7 +4,11 @@
 
     export let data
 </script>
-
-<section>
-    <SliceZone slices={data.slices} {components} />
-</section>
+<body>
+<div class="profile card">
+    <h1>{data.name}</h1>
+    <section>
+        <SliceZone slices={data.slices} {components} />
+    </section>
+</div>
+</body>
