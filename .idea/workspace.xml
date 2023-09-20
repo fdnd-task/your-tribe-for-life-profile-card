@@ -4,14 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="78141120-bf99-4efd-8e3b-1fc3dde25747" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Untitled/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Untitled/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/style/global.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/lib/slices/TestSlice/SPRINT-13-your-tribe-for-life-profile-card.svelte" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib/slices/TestSlice/SPRINT-13-your-tribe-for-life-profile-card.svelte" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/routes/+page.svelte" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes/+page.svelte" afterDir="false" />
-    </list>
+    <list default="true" id="78141120-bf99-4efd-8e3b-1fc3dde25747" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -85,7 +78,7 @@
       <workItem from="1694779371880" duration="8223000" />
       <workItem from="1695048675737" duration="598000" />
       <workItem from="1695147571789" duration="598000" />
-      <workItem from="1695151932167" duration="1283000" />
+      <workItem from="1695151932167" duration="1619000" />
     </task>
     <servers />
   </component>

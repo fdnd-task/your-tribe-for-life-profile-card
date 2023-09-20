@@ -9,7 +9,7 @@
         <SliceZone slices={data.slices} {components} />
     <header>
         <h1>{data.name}</h1>
-        <p><em> Eerste jaar Front-end Developer</em></p>
+        <p><em> Tweede jaar Front-end Developer</em></p>
         <h2>
             1998 <br />
             Geborteplaats : Napels
