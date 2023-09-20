@@ -33,8 +33,11 @@
         <h1>Mijn Hobbies</h1>
         <ul>
             <li>
-                Ik houd van zingen, dansen, zeilen, reizen,<br />
-                tekenen en demonstreren voor goede doelen.
+                Ik houd van zingen, dansen, zeilen, reizen,<br/>
+                tekenen en vooral strijden voor goede doelen.<br/>
+                "Beter om op een dag als leeuw te leven, dan honderd jaar als schaap."<br/>
+                cit. Giovanni Falcone.<br/>
+                Siciliaanse rechter vermoord door de Mafia.
             </li>
         </ul>
     </div>
@@ -150,7 +153,7 @@
         background-color: rgb(215, 207, 97);
         margin-top: 50px ;
         border-radius: 25px;
-        transform: perspective(9cm) rotateX(-20deg) rotateY(25deg);
+        transform: perspective(25cm) rotateX(-16deg) rotateY(25deg);
         padding: 20px;
         box-shadow: 5px 10px 15px black;
     }
@@ -163,7 +166,7 @@
         background-color: rgb(215, 207, 97);
         margin-top: 50px ;
         border-radius: 25px;
-        transform: perspective( 11cm) rotateX(-20deg) rotateY(25deg);
+        transform: perspective( 26cm) rotateX(-16deg) rotateY(25deg);
         padding: 20px;
         box-shadow: 5px 10px 15px black;
 
