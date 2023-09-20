@@ -24,8 +24,8 @@
             </li>
 
             <li>
-                Nu leer ik programmeer talen zoals JavaScript! <br />
-                En ik vind het heel spannend!
+                Nu leer ik programmeer talen zoals JavaScrip<br/>
+                en compilers zoals Svelte-Kit.
             </li>
         </ul>
     </div>
@@ -111,18 +111,6 @@
     }
 
 
-    img {
-
-        border-style: solid;
-        border-color: rgb(43, 11, 27);
-        border-width: 1px;
-        text-align: center;
-        max-width:50%;
-        height:auto;
-        border-radius: 25px;
-        margin-top: 80px;
-    }
-
     h2{
         color:rgb(49, 5, 54);
 
@@ -146,7 +134,7 @@
     }
     li{
 
-        font-size: large;
+        font-size: 25px;
         color:rgb(45, 36, 24)
     }
     div{
