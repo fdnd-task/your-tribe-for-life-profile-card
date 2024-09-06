@@ -11,7 +11,7 @@
         <h1>{data.name}</h1>
         <p><em> Tweede jaar Front-end Developer</em></p>
         <h2>
-            1998 <br />
+            Klasse 1998 <br/>
             Geborteplaats : Napels
         </h2>
     </header>
@@ -20,7 +20,7 @@
         <ul>
             <li>
                 Ik spreek Italiaans, Spaans, Frans, Nederlands, <br />
-                Engels en Arabisch
+                Engels.
             </li>
 
             <li>
@@ -34,11 +34,11 @@
         <ul>
             <li>
                 Ik houd van zingen, dansen, zeilen, reizen,<br/>
-                tekenen en vooral strijden voor goede doelen.
+                tekenen en strijden voor goede doelen zoals Rechtstaat .
             </li>
         </ul>
     </div>
-        <h6>My favorite cit </h6>
+        <h4>My favorite citaat </h4>
         <p>
             "Beter om op een dag als leeuw te leven, dan honderd jaar als schaap."<br/>
             cit. Giovanni Falcone.<br/>
@@ -93,6 +93,7 @@
     h1 {
         margin:8rem 0 1rem;
         color: #002B5B;
+        font-size: large;
     }
     div h1 {
         margin:1rem 0 1rem;
@@ -122,6 +123,10 @@
         color:azure;
         font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 
+    }
+    h4{
+        color:rgb(49, 5, 54);
+        margin-top: 5rem;
     }
 
 
