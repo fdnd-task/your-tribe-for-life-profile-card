@@ -34,13 +34,15 @@
         <ul>
             <li>
                 Ik houd van zingen, dansen, zeilen, reizen,<br/>
-                tekenen en vooral strijden voor goede doelen.<br/>
-                "Beter om op een dag als leeuw te leven, dan honderd jaar als schaap."<br/>
-                cit. Giovanni Falcone.<br/>
-                Siciliaanse rechter vermoord door de Mafia.
+                tekenen en vooral strijden voor goede doelen.
             </li>
         </ul>
     </div>
+        <h6>My favorite cit </h6>
+        <p>
+            "Beter om op een dag als leeuw te leven, dan honderd jaar als schaap."<br/>
+            cit. Giovanni Falcone.<br/>
+            Siciliaanse rechter vermoord door de Mafia.</p>
 </article>
 </body>
 
