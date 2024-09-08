@@ -5,7 +5,20 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="78141120-bf99-4efd-8e3b-1fc3dde25747" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/material_theme_project_new.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/material_theme_project_new.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/lib/slices/PageContent/index.svelte" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib/slices/PageContent/index.svelte" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/lib/slices/PageContent/mocks.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib/slices/PageContent/mocks.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/lib/slices/PageContent/model.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib/slices/PageContent/model.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/lib/slices/TestSlice/SPRINT-13-your-tribe-for-life-profile-card.svelte" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/lib/slices/TestSlice/index.svelte" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib/slices/TestSlice/index.svelte" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/lib/slices/TestSlice/mocks.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib/slices/TestSlice/mocks.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/lib/slices/TestSlice/model.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib/slices/TestSlice/model.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/prismicio-types.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/prismicio-types.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/routes/+page.server.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes/+page.server.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/routes/+page.svelte" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes/+page.svelte" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/style/global.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/style/global.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -47,7 +60,8 @@
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "preferences.pluginManager",
+    "prettierjs.PrettierConfiguration.Package": "/Users/amirnapoletano/Documents/Github/SPRINT-13-your-tribe-for-life-profile-card/SPRINT-13-your-tribe-for-life-profile-card/node_modules/prettier",
+    "settings.editor.selected.configurable": "preferences.editor",
     "ts.external.directory.path": "/Applications/WebStorm.app/Contents/plugins/javascript-plugin/jsLanguageServicesImpl/external",
     "vue.rearranger.settings.migration": "true"
   }
@@ -88,7 +102,8 @@
       <workItem from="1695048675737" duration="598000" />
       <workItem from="1695147571789" duration="598000" />
       <workItem from="1695151932167" duration="3259000" />
-      <workItem from="1725625853795" duration="3087000" />
+      <workItem from="1725625853795" duration="16595000" />
+      <workItem from="1725796074190" duration="10408000" />
     </task>
     <servers />
   </component>
